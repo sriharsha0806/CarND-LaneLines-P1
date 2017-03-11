@@ -20,9 +20,13 @@ Creating a Great Writeup
 For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
 
 1. Describe the pipeline
+* The current pipeline consists of converting image into grayscale image. The grayscale is blurred using gaussian filter.  A region of interest function for selecting desired region in image for lanes.Applying hough transform. Here to increase the confidence of hough lines i have created three hough lines parameter and added them.
 
 2. Identify any shortcomings
+* I initially debugged the pipeline with S channel of the image rather grayscale image. But theperformance of  pipeline is not good. 
 
+As we can see from challenge video, The pipeline is not working for images with steep curves and shadows.
+* Need to explore the colorspace, implement convolution method explained in Q/A session of SelfDrivingCar - Advanced Lane Lines.
 3. Suggest possible improvements
 
 We encourage using images in your writeup to demonstrate how your pipeline works.  
